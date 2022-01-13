@@ -21,4 +21,3 @@ In addition to the main actions, there will be actions on characters that requir
 -magic scroll (increase spell damage)
 -grot (increase ranged damage)
 
-Translated with www.DeepL.com/Translator (free version)
