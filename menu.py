@@ -1,5 +1,6 @@
 import pygame
 
+
 class Menu():
     def __init__(self, game):
         self.game = game
@@ -24,6 +25,7 @@ class MainMenu(Menu):
         self.optionsx, self.optionsy = self.mid_w, self.mid_h + 50
         self.creditsx, self.creditsy = self.mid_w, self.mid_h + 70
         self.cursor_rect.midtop = (self.startx + self.offset, self.starty)
+
 
     def display_menu(self):
         self.run_display = True
@@ -104,12 +106,21 @@ class OptionsMenu(Menu):
                 self.state = 'Volume'
                 self.cursor_rect.midtop = (self.volx + self.offset, self.voly)
         elif self.game.START_KEY:
-            # TO-DO: Create a Volume Menu and a Controls Menu
             pass
-
+'''
+class volume_menu(self):
+    def __init__(self, game):
+        Menu.__init__(self, game)
+    def display_menu(self):
+        self.run_display = True
+        while self.run_display:
+            self.game.check_events()
+'''
 class CreditsMenu(Menu):
     def __init__(self, game):
         Menu.__init__(self, game)
+
+
 
     def display_menu(self):
         self.run_display = True

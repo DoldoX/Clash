@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf288c9a-6ca0-4fdd-b917-d8cff97ec1aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-BIT WONDER.TTF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/założenia/Zadanie + załozenia.odt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/założenia/działanie menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/założenia/loop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheNewWorld.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assumptions/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assumptions/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assumptions/Zadanie + załozenia.odt" beforeDir="false" afterPath="$PROJECT_DIR$/assumptions/Zadanie + załozenia.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

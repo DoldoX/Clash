@@ -1,4 +1,4 @@
-							Dynasty
+							Clash
 
 
 A turn-based, plan-and-measure opponent movement game.
