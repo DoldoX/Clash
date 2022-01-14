@@ -8,6 +8,7 @@ class Menu():
         self.run_display = True
         self.cursor_rect = pygame.Rect(0, 0, 20, 20)
         self.offset = - 100
+        menu_sound = pygame.mixer.Sound('TheNewWorld.mp3')
 
     def draw_cursor(self):
         self.game.draw_text('*', 15, self.cursor_rect.x, self.cursor_rect.y)
@@ -87,7 +88,7 @@ class OptionsMenu(Menu):
         while self.run_display:
             self.game.check_events()
             self.check_input()
-            self.game.display.fill((0, 0, 0))
+            self.game.display.fill((self.game.BLACK))
             self.game.draw_text('Options', 20, self.game.DISPLAY_W / 2, self.game.DISPLAY_H / 2 - 30)
             self.game.draw_text("Volume", 15, self.volx, self.voly)
             self.game.draw_text("Controls", 15, self.controlsx, self.controlsy)
@@ -107,15 +108,60 @@ class OptionsMenu(Menu):
                 self.cursor_rect.midtop = (self.volx + self.offset, self.voly)
         elif self.game.START_KEY:
             pass
-'''
-class volume_menu(self):
+
+class VolumeMenu(Menu):#patrz main menu
     def __init__(self, game):
         Menu.__init__(self, game)
+        self.state = 'Game_Volume'
+        self.gvolx, self.gvoly = self.mid_w, self.mid_h + 20
+        self.mvolx, self.mvoly = self.mid_w, self.mid_h + 40
+        self.cursor_rect.midtop = (self.gvolx + self.offset, self.gvoly)
+
+
     def display_menu(self):
         self.run_display = True
         while self.run_display:
             self.game.check_events()
-'''
+            self.check_input()
+            self.game.display.fill((self.game.BLACK))
+            self.game.draw_text('Game Volume', 20, self.game.DISPLAY_W /2,self.game.DISPLAY_H / 2)
+            self.game.draw_text('Music Volume', 20, self.game.DISPLAY_W /2,self.game.DISPLAY_H / 2 - 30)
+            self.draw_cursor()
+            self.blit_screen()
+
+    def check_input(self, game):
+        if self.game.BACK_KEY:
+            self.options = OptionsMenu(self)
+            self.run_display = False
+        elif self.game.UP_KEY or self.game.DOWN_KEY:
+            if self.state == 'Game Volume':
+                self.state = 'Music Volume'
+                self.cursor_rect.midtop = (self.mvolx + self.offset, self.mvoly)
+            elif self.state == 'Music Volume':
+                self.state = 'Game Volume'
+                self.cursor_rect.midtop = (self.gvolx + self.offset, self.gvoly)
+            elif self.game.START_KEY:
+                pass
+
+    def move_cursor(self):
+        if self.game.DOWN_KEY:
+            if self.state == 'Game Volume':
+                self.cursor_rect.midtop = (self.gvolx + self.offset, self.gvoly)
+                self.state = 'Music Volume'
+            elif self.state == 'Music Volume':
+                self.cursor_rect.midtop = (self.mvolx + self.offset, self.mvoly)
+                self.state = 'Game Volume'
+
+        elif self.game.UP_KEY:
+            if self.state == 'Game Volume':
+                self.cursor_rect.midtop = (self.gvolx + self.offset, self.gvoly)
+                self.state = 'Music Volume'
+            elif self.state == 'Game Volume':
+                self.cursor_rect.midtop = (self.mvolx + self.offset, self.mvoly)
+                self.state = 'Music Volume'
+
+
+
 class CreditsMenu(Menu):
     def __init__(self, game):
         Menu.__init__(self, game)

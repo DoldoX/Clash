@@ -5,7 +5,7 @@ from menu import *
 class Game():
     def __init__(self):
         pygame.init()
-        menu_sound = pygame.mixer.Sound('TheNewWorld.mp3')
+        
         self.running, self.playing = True, False
         self.UP_KEY, self.DOWN_KEY, self.START_KEY, self.BACK_KEY = False, False, False, False
         self.DISPLAY_W, self.DISPLAY_H = 1280, 720
@@ -18,6 +18,7 @@ class Game():
         self.options = OptionsMenu(self)
         self.credits = CreditsMenu(self)
         self.curr_menu = self.main_menu
+        self.volume = VolumeMenu(self)
 
 
     def game_loop(self):
